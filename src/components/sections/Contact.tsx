@@ -5,7 +5,13 @@ import Image from "next/image";
 import { Mail, MessageCircle, MapPin } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import useContactAnimation from "@/hooks/useContactAnimation";
-
+import {
+  Map,
+  MapMarker,
+  MarkerContent,
+  MarkerPopup,
+  MapControls,
+} from "@/components/ui/map";
 const contacts = [
   {
     title: "Email",
@@ -17,13 +23,13 @@ const contacts = [
     title: "WhatsApp",
     value: "+62 821 1234 5678",
     icon: MessageCircle,
-    href: "https://wa.me/6282112345678",
+    href: "https://wa.me/62895602591914",
   },
   {
     title: "GitHub",
     value: "github.com/vijjaynovaldi",
     icon: FaGithub,
-    href: "https://github.com/vijjaynovaldi",
+    href: "https://github.com/nvld-dev",
   }
 ];
 
@@ -98,19 +104,35 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Illustration */}
-        <div className="contact-illustration relative mx-auto mt-8 max-w-3xl overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
-          <Image
-            src="/images/contact/contact-map.webp"
-            alt="Contact Illustration"
-            width={1200}
-            height={500}
-            className="h-[170px] w-full object-cover opacity-80 transition-transform duration-700 hover:scale-105"
-            priority
-          />
+        {/* Interactive Map */}
+        <div className="contact-illustration relative mx-auto mt-8 max-w-3xl overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl">
+          <Map
+            className="h-[220px] w-full"
+            center={[101.4478, 0.5071]}
+            zoom={11}
+          >
+            <MapControls position="top-right" showZoom />
 
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#030712]/70 via-transparent to-transparent" />
-          <div className="pointer-events-none absolute inset-0 bg-cyan-400/5" />
+            <MapMarker
+              longitude={101.3617388776285}
+              latitude={0.46200787270594273}
+            >
+              <MarkerContent>
+                <div className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,.7)]">
+                  <div className="h-2 w-2 rounded-full bg-white" />
+                </div>
+              </MarkerContent>
+
+              <MarkerPopup closeButton={false}>
+                <div className="p-1">
+                  <p className="font-semibold">Vijjay Novaldi</p>
+                  <p className="text-xs text-slate-500">Software Engineer</p>
+                </div>
+              </MarkerPopup>
+            </MapMarker>
+          </Map>
+
+          <div className="pointer-events-none absolute inset-0 rounded-2xl border border-cyan-400/10" />
         </div>
       </div>
 

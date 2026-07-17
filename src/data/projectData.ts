@@ -8,7 +8,7 @@ export const projects = [
     status: "Completed",
     statusColor: "green",
     tech: ["Java", "Spring Boot", "MySQL"],
-    demo: "#",
+    demo: "https://tanjakabsensi.nvld.my.id/",
     github: "#",
   },
   {

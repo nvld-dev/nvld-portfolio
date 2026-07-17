@@ -5,8 +5,6 @@ import { projects } from "@/data/projectData";
 import Image from "next/image";
 import useProjectsAnimation from "@/hooks/useProjectsAnimation";
 
-
-
 export default function Projects() {
   const projectsRef = useRef<HTMLElement>(null);
 
@@ -45,7 +43,7 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="project-card group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(93,230,255,.15)]"
+              className="project-card group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(93,230,255,.15)]"
             >
               {/* Thumbnail */}
               <div className="relative h-[140px] overflow-hidden">
@@ -65,7 +63,7 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-4">
+              <div className="flex flex-1 flex-col p-4">
                 <h3 className="text-[17px] font-semibold text-white">
                   {project.title}
                 </h3>
@@ -87,37 +85,34 @@ export default function Projects() {
                 </div>
 
                 {/* Footer */}
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="text-[12px] text-slate-500">
-                    {project.year}
-                  </span>
+                <div className="mt-auto pt-5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[12px] text-slate-500">
+                      {project.year}
+                    </span>
 
-                  <span
-                    className={`rounded-full px-2.5 py-0.5 text-[10px] font-medium ${
-                      project.statusColor === "green"
-                        ? "bg-emerald-500/10 text-emerald-400"
-                        : "bg-yellow-500/10 text-yellow-400"
-                    }`}
-                  >
-                    {project.status}
-                  </span>
-                </div>
+                    <span
+                      className={`rounded-full px-2.5 py-0.5 text-[10px] font-medium ${
+                        project.statusColor === "green"
+                          ? "bg-emerald-500/10 text-emerald-400"
+                          : "bg-yellow-500/10 text-yellow-400"
+                      }`}
+                    >
+                      {project.status}
+                    </span>
+                  </div>
 
-                {/* Actions */}
-                <div className="mt-4 flex gap-2.5">
-                  <a
-                    href={project.demo}
-                    className="flex-1 rounded-xl bg-cyan-400 px-3.5 py-2 text-center text-[13px] font-medium text-slate-900 transition hover:bg-cyan-300"
-                  >
-                    Live Demo
-                  </a>
-
-                  <a
-                    href={project.github}
-                    className="rounded-xl border border-white/10 px-3.5 py-2 text-[13px] text-slate-300 transition hover:border-cyan-400 hover:text-white"
-                  >
-                    GitHub
-                  </a>
+                  {/* Actions */}
+                  <div className="mt-4 flex gap-2.5">
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 rounded-xl bg-cyan-400 px-3.5 py-2 text-center text-[13px] font-medium text-slate-900 transition hover:bg-cyan-300"
+                    >
+                      Live Demo
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
