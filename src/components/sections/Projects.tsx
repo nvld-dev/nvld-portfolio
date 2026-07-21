@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { projects } from "@/data/projectData";
+import Link from "next/link";
 import Image from "next/image";
 import useProjectsAnimation from "@/hooks/useProjectsAnimation";
 
@@ -104,14 +105,12 @@ export default function Projects() {
 
                   {/* Actions */}
                   <div className="mt-4 flex gap-2.5">
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href={`/projects/${project.slug}`}
                       className="flex-1 rounded-xl bg-cyan-400 px-3.5 py-2 text-center text-[13px] font-medium text-slate-900 transition hover:bg-cyan-300"
                     >
-                      Live Demo
-                    </a>
+                      View Project
+                    </Link>
                   </div>
                 </div>
               </div>
