@@ -1,8 +1,3 @@
-export interface ProjectTimeline {
-  title: string;
-  description: string;
-}
-
 export interface ProjectContent {
   slug: string;
 
@@ -28,18 +23,14 @@ export interface ProjectContent {
   // Features
   features: ProjectFeature[];
 
+  // Gallery
+  gallery: ProjectGalleryItem[];
+  
   // Tech Stack
   techStack: ProjectTech[];
 
-  // Gallery
-  gallery: ProjectGalleryItem[];
-
-
   // Architecture
-  architecture: string[];
-
-  // Timeline
-  timeline: ProjectTimeline[];
+  architecture: ProjectArchitectureNode[];
 }
 
 export interface ProjectOverview {
@@ -98,4 +89,19 @@ export interface ProjectTech {
   name: string;
   category: string;
   icon: ProjectTechIcon;
+}
+
+export type ProjectArchitectureIcon =
+  | "smartphone"
+  | "globe"
+  | "server"
+  | "database"
+  | "cloud"
+  | "sheet"
+  | "android";
+
+export interface ProjectArchitectureNode {
+  title: string;
+  description: string;
+  icon: ProjectArchitectureIcon;
 }

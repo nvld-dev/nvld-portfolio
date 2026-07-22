@@ -23,7 +23,7 @@ export const projectContents: ProjectContent[] = [
 
     liveUrl: "https://tanjakabsensi.nvld.my.id",
 
-    githubUrl: "",
+    githubUrl: "https://github.com/nvld-dev/tanjak-absensi",
 
     overview: {
       description:
@@ -77,7 +77,26 @@ export const projectContents: ProjectContent[] = [
         icon: "server",
       },
     ],
-
+    gallery: [
+      {
+        image: "/images/projects/tanjak-absensi/dashboard.png",
+        title: "Dashboard",
+        description:
+          "Monitor attendance statistics and employee activities in real time.",
+      },
+      {
+        image: "/images/projects/tanjak-absensi/attendance.png",
+        title: "Attendance",
+        description:
+          "Employees can check in and check out securely using WiFi validation.",
+      },
+      {
+        image: "/images/projects/tanjak-absensi/report.png",
+        title: "Attendance Report",
+        description:
+          "Generate attendance reports with PDF export for administration.",
+      },
+    ],
     techStack: [
       {
         name: "Java",
@@ -111,52 +130,26 @@ export const projectContents: ProjectContent[] = [
       },
     ],
 
-    gallery: [
-      {
-        image: "/images/projects/tanjak-absensi/dashboard.png",
-        title: "Dashboard",
-        description:
-          "Monitor attendance statistics and employee activities in real time.",
-      },
-      {
-        image: "/images/projects/tanjak-absensi/attendance.png",
-        title: "Attendance",
-        description:
-          "Employees can check in and check out securely using WiFi validation.",
-      },
-      {
-        image: "/images/projects/tanjak-absensi/report.png",
-        title: "Attendance Report",
-        description:
-          "Generate attendance reports with PDF export for administration.",
-      },
-    ],
-
     architecture: [
-      "Android Application",
-      "REST API",
-      "PHP Backend",
-      "MySQL Database",
-    ],
-
-    timeline: [
       {
-        title: "Planning",
-        description: "Requirement analysis and attendance workflow design.",
+        title: "Android App",
+        description: "Employee attendance application",
+        icon: "android",
       },
       {
-        title: "Development",
-        description:
-          "Android application, REST API, and web dashboard implementation.",
+        title: "REST API",
+        description: "Communication layer",
+        icon: "globe",
       },
       {
-        title: "Testing",
-        description:
-          "Functional testing, WiFi validation testing, and report verification.",
+        title: "PHP Backend",
+        description: "Business logic and API services",
+        icon: "server",
       },
       {
-        title: "Deployment",
-        description: "Production deployment and documentation.",
+        title: "MySQL Database",
+        description: "Stores attendance and employee data",
+        icon: "database",
       },
     ],
   },
@@ -237,6 +230,33 @@ export const projectContents: ProjectContent[] = [
       },
     ],
 
+    gallery: [
+      {
+        image: "/images/projects/absensi-kkn/login.png",
+        title: "Login",
+        description:
+          "Students and administrators securely sign in using Google authentication.",
+      },
+      {
+        image: "/images/projects/absensi-kkn/dashboard.png",
+        title: "Dashboard",
+        description:
+          "Monitor attendance statistics and participant activities in real time.",
+      },
+      {
+        image: "/images/projects/absensi-kkn/qrcode.png",
+        title: "QR Code Attendance",
+        description:
+          "Students scan QR Codes to record attendance quickly and accurately.",
+      },
+      {
+        image: "/images/projects/absensi-kkn/report.png",
+        title: "Attendance Report",
+        description:
+          "Attendance recaps are generated automatically and synchronized with Google Sheets.",
+      },
+    ],
+
     techStack: [
       {
         name: "PHP",
@@ -270,58 +290,26 @@ export const projectContents: ProjectContent[] = [
       },
     ],
 
-    gallery: [
-      {
-        image: "/images/projects/absensi-kkn/login.png",
-        title: "Login",
-        description:
-          "Students and administrators securely sign in using Google authentication.",
-      },
-      {
-        image: "/images/projects/absensi-kkn/dashboard.png",
-        title: "Dashboard",
-        description:
-          "Monitor attendance statistics and participant activities in real time.",
-      },
-      {
-        image: "/images/projects/absensi-kkn/qrcode.png",
-        title: "QR Code Attendance",
-        description:
-          "Students scan QR Codes to record attendance quickly and accurately.",
-      },
-      {
-        image: "/images/projects/absensi-kkn/report.png",
-        title: "Attendance Report",
-        description:
-          "Attendance recaps are generated automatically and synchronized with Google Sheets.",
-      },
-    ],
-
     architecture: [
-      "Web Application",
-      "PHP Backend",
-      "MySQL Database",
-      "Google Sheets API",
-    ],
-
-    timeline: [
       {
-        title: "Requirement Analysis",
-        description:
-          "Collect attendance requirements for university KKN activities.",
+        title: "Web Application",
+        description: "Attendance management system",
+        icon: "globe",
       },
       {
-        title: "System Development",
-        description:
-          "Develop QR attendance, authentication, and dashboard modules.",
+        title: "PHP Backend",
+        description: "Processes attendance requests",
+        icon: "server",
       },
       {
-        title: "Testing",
-        description: "Validate attendance flow and reporting.",
+        title: "MySQL Database",
+        description: "Stores attendance records",
+        icon: "database",
       },
       {
-        title: "Deployment",
-        description: "Deploy system for university use.",
+        title: "Google Sheets",
+        description: "Automatic attendance recap",
+        icon: "sheet",
       },
     ],
   },
@@ -403,29 +391,6 @@ export const projectContents: ProjectContent[] = [
       },
     ],
 
-    techStack: [
-      {
-        name: "Next.js",
-        category: "Framework",
-        icon: "nextjs",
-      },
-      {
-        name: "TypeScript",
-        category: "Programming Language",
-        icon: "typescript",
-      },
-      {
-        name: "Tailwind CSS",
-        category: "CSS Framework",
-        icon: "tailwind",
-      },
-      {
-        name: "Vercel",
-        category: "Hosting Platform",
-        icon: "vercel",
-      },
-    ],
-
     gallery: [
       {
         image: "/images/projects/web-umkm/home.png",
@@ -453,24 +418,49 @@ export const projectContents: ProjectContent[] = [
       },
     ],
 
-    architecture: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    techStack: [
+      {
+        name: "Next.js",
+        category: "Framework",
+        icon: "nextjs",
+      },
+      {
+        name: "TypeScript",
+        category: "Programming Language",
+        icon: "typescript",
+      },
+      {
+        name: "Tailwind CSS",
+        category: "CSS Framework",
+        icon: "tailwind",
+      },
+      {
+        name: "Vercel",
+        category: "Hosting Platform",
+        icon: "vercel",
+      },
+    ],
 
-    timeline: [
+    architecture: [
       {
-        title: "Planning",
-        description: "Collect business requirements and branding assets.",
+        title: "Next.js",
+        description: "Frontend application",
+        icon: "globe",
       },
       {
-        title: "Design",
-        description: "Create responsive UI and user experience.",
+        title: "React",
+        description: "Interactive UI components",
+        icon: "smartphone",
       },
       {
-        title: "Development",
-        description: "Implement website using Next.js and Tailwind CSS.",
+        title: "Tailwind CSS",
+        description: "Modern styling framework",
+        icon: "cloud",
       },
       {
-        title: "Deployment",
-        description: "Deploy website to Vercel with custom domain.",
+        title: "Vercel",
+        description: "Hosting and deployment",
+        icon: "server",
       },
     ],
   },
